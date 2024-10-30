@@ -1,11 +1,10 @@
-﻿using JWT.Models;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace JWT.Data
 {
-    public class ApplicationDbContext:IdentityDbContext<AppUsers>
+    public class ApplicationDbContext:IdentityDbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext>options) : base(options) { }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options):base(options){ }
     }
 }
